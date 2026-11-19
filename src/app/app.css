@@ -1,0 +1,19 @@
+.sidebar {
+  width: 240px;
+  background-color: #162246;
+  flex-shrink: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 500;
+}
+
+.sidebar .nav-link.active {
+  background-color: #1d63ed;
+}
+
+.sidebar .nav-link:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+}

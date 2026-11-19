@@ -1,0 +1,53 @@
+<div class="login-wrapper d-flex min-vh-100">
+  <div class="login-left d-none d-md-flex flex-column justify-content-center align-items-center text-white p-5">
+    <i class="bi bi-box-seam-fill display-1 mb-3"></i>
+    <h1 class="fw-bold mb-2">AdminPanel</h1>
+    <p class="text-center text-white-50 fs-5">
+      Sistema de administración<br>de productos y categorías
+    </p>
+  </div>
+
+  <div class="login-right d-flex flex-grow-1 justify-content-center align-items-center p-4">
+    <div class="card border-0 shadow-sm p-4 p-md-5 login-card">
+      <div class="text-center mb-4">
+        <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+          <i class="bi bi-lock-fill fs-2 text-primary"></i>
+          <h2 class="fw-bold mb-0 text-dark">Iniciar sesión</h2>
+        </div>
+        <p class="text-muted mb-0">Ingresa tus credenciales</p>
+      </div>
+
+      <form (ngSubmit)="ingresar()">
+        <div class="input-group mb-3">
+          <span class="input-group-text bg-white text-muted"><i class="bi bi-person-fill"></i></span>
+          <input
+            type="text"
+            class="form-control py-2"
+            placeholder="Usuario"
+            name="username"
+            [(ngModel)]="username"
+            required>
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text bg-white text-muted"><i class="bi bi-lock-fill"></i></span>
+          <input
+            type="password"
+            class="form-control py-2"
+            placeholder="Contraseña"
+            name="password"
+            [(ngModel)]="password"
+            required>
+        </div>
+
+        <div *ngIf="errorMessage" class="alert alert-danger py-2 small">
+          {{ errorMessage }}
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Ingresar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

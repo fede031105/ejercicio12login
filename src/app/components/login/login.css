@@ -1,0 +1,14 @@
+.login-left {
+  width: 45%;
+  background: linear-gradient(135deg, #16327a 0%, #0f1f4b 100%);
+}
+
+.login-right {
+  background-color: #eef3fb;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+}
